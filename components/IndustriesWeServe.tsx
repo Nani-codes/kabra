@@ -67,21 +67,12 @@ export function IndustriesWeServe() {
                     </h2>
                   </div>
                 </AnimateOnScroll>
-                <AnimateOnScroll animation="fadeInUp" delay={100} className="elementor-element elementor-widget elementor-widget-text-editor">
-                  <div className="elementor-widget-container">
-                    <div className="elementor-text-editor elementor-clearfix who-we-are-body">
-                      <p>
-                        Engineering <span className="industry-orange">precision</span> you can trust — from concept to <span className="industry-orange">production</span>.
-                      </p>
-                    </div>
-                  </div>
-                </AnimateOnScroll>
                 <AnimateOnScroll animation="fadeInUp" delay={200} className="elementor-element elementor-element-b29930d elementor-widget elementor-widget-text-editor">
                   <div className="elementor-widget-container">
                     <div className="elementor-text-editor elementor-clearfix who-we-are-body">
                       <p>
-                        We&apos;re not just a tooling vendor — we&apos;re a full-cycle <span className="industry-orange">manufacturing partner</span>.
-                        We work with high-precision industries where <span className="industry-orange">accuracy</span>, <span className="industry-orange">consistency</span>, and <span className="industry-orange">reliability</span> are non-negotiable.
+                        We&apos;re not just a tooling vendor — we&apos;re a full-cycle manufacturing partner.
+                        We work with high-precision industries where accuracy, consistency, and reliability are non-negotiable.
                       </p>
                     </div>
                   </div>

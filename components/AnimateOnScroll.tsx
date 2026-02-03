@@ -1,8 +1,10 @@
 "use client";
 
-import { useRef, useEffect, useState, type ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Animation = "fadeInUp" | "fadeIn";
+
 type Props = {
   children: ReactNode;
   animation?: Animation;
@@ -16,32 +18,49 @@ export function AnimateOnScroll({
   delay = 0,
   className = "",
 }: Props) {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0]?.isIntersecting) setVisible(true);
+        const entry = entries[0];
+        if (entry?.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
       },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -80px 0px",
+      },
     );
+
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
-  const visibleClass = visible ? "elementor-invisible--visible" : "elementor-invisible";
-  const style = visible && delay ? { animationDelay: `${delay}ms` } : undefined;
+  const baseClass = visible
+    ? "elementor-invisible--visible"
+    : "elementor-invisible";
+
+  const style: CSSProperties | undefined =
+    visible && delay
+      ? {
+          animationDelay: `${delay}ms`,
+        }
+      : undefined;
 
   return (
     <div
       ref={ref}
-      className={`${visibleClass} ${className}`}
-      style={style}
+      className={`${baseClass} ${className}`.trim()}
       data-animation={animation}
       data-delay={delay}
+      style={style}
     >
       {children}
     </div>
