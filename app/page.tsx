@@ -4,7 +4,6 @@ import { OurCapabilities } from "@/components/OurCapabilities";
 import { CustomSolutionsSection } from "@/components/CustomSolutionsSection";
 import { WeOfferServicesSection } from "@/components/WeOfferServicesSection";
 import { LeaderInPowerSection } from "@/components/LeaderInPowerSection";
-import { ContactSection } from "@/components/ContactSection";
 import { CTASection } from "@/components/CTASection";
 
 export default function HomePage() {
@@ -22,7 +21,6 @@ export default function HomePage() {
           <CustomSolutionsSection />
           <WeOfferServicesSection />
           <LeaderInPowerSection />
-          <ContactSection />
           <CTASection />
         </div>
       </div>

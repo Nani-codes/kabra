@@ -14,7 +14,7 @@ export function HeroSection() {
     target: containerRef,
     offset: ["start end", "end start"],
   });
-  const y = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
+  const y = useTransform(scrollYProgress, [0, 0.5], [0, 80]);
 
   return (
     <section
@@ -29,11 +29,16 @@ export function HeroSection() {
               <div className="elementor-row">
                 <div className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2c3c3be">
                   <div className="elementor-column-wrap elementor-element-populated">
-                    <div className="elementor-widget-wrap">
+                    <motion.div
+                      className="elementor-widget-wrap"
+                      style={{ y }}
+                    >
                       <AnimateOnScroll animation="fadeInUp" className="elementor-element elementor-element-7878364 elementor-widget elementor-widget-heading">
                         <div className="elementor-widget-container">
                           <h1 className="elementor-heading-title elementor-size-default elementor-align-after-center">
-                            We Don&apos;t Just Make Moulds. We Engineer Manufacturing Confidence.
+                            We Don&apos;t Just Make Moulds.
+                            <br />
+                            We Engineer Manufacturing Confidence.
                           </h1>
                         </div>
                       </AnimateOnScroll>
@@ -64,7 +69,7 @@ export function HeroSection() {
                           </div>
                         </div>
                       </AnimateOnScroll>
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
               </div>

@@ -37,10 +37,13 @@ export function WeOfferServicesSection() {
           <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c169227">
             <div className="elementor-column-wrap elementor-element-populated">
               <div className="elementor-widget-wrap">
-                <AnimateOnScroll animation="fadeInUp" className="elementor-element elementor-element-ba20d64 elementor-widget elementor-widget-heading">
+                <AnimateOnScroll
+                  animation="fadeInUp"
+                  className="elementor-element elementor-element-ba20d64 elementor-widget elementor-widget-heading"
+                >
                   <div className="elementor-widget-container">
-                    <h2 className="elementor-heading-title elementor-size-default elementor-align-after-mobile-center">
-                      Our Esteemed Customers (Trust Positioning)
+                    <h2 className="elementor-heading-title elementor-size-default elementor-align-after-mobile-center customers-heading">
+                      Our Esteemed Customers
                     </h2>
                   </div>
                 </AnimateOnScroll>
