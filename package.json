@@ -1,0 +1,17 @@
+{
+  "name": "industrial8-nextjs",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "fetch:kabra-gallery": "node scripts/download-kabra-gallery.mjs"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  }
+}
+

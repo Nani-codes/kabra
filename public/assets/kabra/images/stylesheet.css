@@ -1,0 +1,91 @@
+HTML {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 13px; BACKGROUND: #ffffff; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #000000; LINE-HEIGHT: 1.5em; PADDING-TOP: 0px; font-family:Arial, Helvetica, sans-serif
+}
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: #ffffff; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 1.5em; PADDING-TOP: 0px; FONT-FAMILY: Arial, sans serif; 
+}
+.left {
+	DISPLAY: inline; FLOAT: left
+}
+.right {
+	DISPLAY: inline; FLOAT: right
+}
+
+
+.topbtn {
+	FONT-WEIGHT: bold; COLOR: #FFFFFF; TEXT-DECORATION: none; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:15px; text-align:center
+}
+.topbtn A:link {
+	FONT-WEIGHT: bold; COLOR: #FFFFFF; TEXT-DECORATION: none; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:15px; text-align:center
+}
+.topbtn A:active {
+	FONT-WEIGHT: bold; COLOR: #FFFFFF; TEXT-DECORATION: none; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:15px; text-align:center
+}
+.topbtn A:visited {
+	FONT-WEIGHT: bold; COLOR: #FFFFFF; TEXT-DECORATION: none; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:15px; text-align:center
+}
+.topbtn A:hover {
+	FONT-WEIGHT: bold; COLOR: #00FFFF; TEXT-DECORATION: underline; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:15px; text-align:center
+}
+
+
+.btmlink {
+	PADDING-LEFT: 1px; COLOR: #000000; TEXT-DECORATION: none; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold
+}
+.btmlink A:link {
+	PADDING-LEFT: 1px;  COLOR: #000000; TEXT-DECORATION: none; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px
+}
+.btmlink A:active {
+	PADDING-LEFT: 1px;  COLOR: #000000; TEXT-DECORATION: none; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px
+}
+.btmlink A:visited {
+	PADDING-LEFT: 1px;  COLOR: #000000; TEXT-DECORATION: none; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px
+}
+.btmlink A:hover {
+	 COLOR: #FF0000; TEXT-DECORATION: underline; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px
+}
+
+.main {
+	BACKGROUND-COLOR: #ffffff
+}
+.bgt {
+	HEIGHT: 47px; BACKGROUND-COLOR: #1c8787
+}
+#pad {
+	PADDING-TOP: 10px
+}
+.white {
+	PADDING-LEFT: 25px; FONT-WEIGHT: bold; VERTICAL-ALIGN: middle; COLOR: #ffffff; TEXT-ALIGN: left
+}
+.footer {
+	BACKGROUND-COLOR: #005898 ;PADDING-LEFT: 15px; color:#FFFFFF; font-size:10px
+}
+
+.contt {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #000000; PADDING-TOP: 0px; FONT-FAMILY: Arial, sans serif; TEXT-ALIGN: justify; padding-top:5px
+}
+
+.contheader {
+	PADDING-LEFT: 8px; FONT-WEIGHT: bold; BORDER-LEFT: #0069ab 10px solid; HEIGHT: 24px; BACKGROUND-COLOR: #FFFFFF; font-size:22px; color:#0b5093; font:Calibri
+}
+.buletpt {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 14px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #000000; PADDING-TOP: 0px; FONT-FAMILY: Arial, sans serif; TEXT-ALIGN: justify; padding-top:5px
+}
+
+
+
+.headernew {
+	FONT-WEIGHT: bold; font-size:20px; color:#0b5093; font:Calibri
+}
+.theme {
+	PADDING-LEFT: 5px; FONT-WEIGHT: bold; COLOR: #990000; BACKGROUND-COLOR: #a1e339; font-size:15px; height:inherit; 
+}
+.bgy {
+	BACKGROUND-COLOR: #eeece0
+}
+INPUT.field {
+	BORDER-RIGHT: #2a8485 1px solid; BORDER-TOP: #2a8485 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 8pt; BORDER-LEFT: #2a8485 1px solid; WIDTH: 120pt; COLOR: #000065; BORDER-BOTTOM: #2a8485 1px solid; FONT-FAMILY: Tahoma, MS Sans Serif; HEIGHT: 15px; BACKGROUND-COLOR: #f6f5ee
+}
+INPUT.button {
+	BORDER-RIGHT: #f6f5ee 1px solid; BORDER-TOP: #f6f5ee 1pt solid; PADDING-LEFT: 3px; FONT-WEIGHT: bold; FONT-SIZE: 8pt; BORDER-LEFT: #f6f5ee 1pt solid; WIDTH: 50pt; COLOR: #ffffff; BORDER-BOTTOM: #f6f5ee 1px solid; FONT-FAMILY: Tahoma, MS Sans Serif; HEIGHT: 25px; BACKGROUND-COLOR: #2a8485
+}
