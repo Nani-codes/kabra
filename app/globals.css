@@ -24,3 +24,335 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Navbar: dark theme, single-line menu, bottom border */
+#masthead,
+#masthead .elementor-element-e52a00e {
+  background-color: #1a2744 !important;
+  background-image: none !important;
+  min-height: 76px !important;
+  height: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06) !important;
+}
+#masthead .elementor-element-e52a00e > .elementor-background-overlay {
+  display: none !important;
+}
+#masthead .elementor-element-e52a00e > .elementor-container {
+  display: flex !important;
+  align-items: center !important;
+  min-height: 76px !important;
+}
+#masthead .elementor-element-e52a00e .elementor-row {
+  align-items: center !important;
+  width: 100%;
+}
+#masthead .elementor-element-e52a00e .elementor-column-wrap,
+#masthead .elementor-element-e52a00e .elementor-widget-wrap {
+  align-items: center !important;
+}
+#masthead .elementor-element-e52a00e {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  padding: 0 !important;
+}
+
+/* Menu: single line – no wrap, compact font, even spacing */
+#masthead .sm_nav_menu a,
+#masthead .elementor-navigation a,
+#masthead .elementor-78 .elementor-element-e52a00e a:not(.man_logo) {
+  color: #fff !important;
+  font-weight: 500 !important;
+  font-size: 0.9375rem !important;
+  letter-spacing: 0.4px !important;
+  padding: 0.25em 0 !important;
+  white-space: nowrap !important;
+}
+#masthead .sm_nav_menu {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 1.5rem !important;
+  flex-shrink: 0 !important;
+}
+#masthead .sm_nav_menu > li {
+  display: flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+}
+#masthead .sm_nav_menu a:hover,
+#masthead .elementor-navigation a:hover {
+  color: #fa6401 !important;
+}
+#masthead .sm_nav_menu .current-menu-item > a,
+#masthead .sm_nav_menu .current_page_item > a {
+  color: #fa6401 !important;
+}
+#masthead .menu-item-shop .nav-link-shop {
+  border: none !important;
+  color: #fa6401 !important;
+  padding: 0.25em 0 !important;
+  font-weight: 600 !important;
+}
+#masthead .menu-item-shop.current-menu-item .nav-link-shop {
+  color: #fa6401 !important;
+}
+#masthead .sm_nav_menu .sub-menu a {
+  color: #e2e8f0 !important;
+}
+#masthead .sm_nav_menu .sub-menu a:hover {
+  color: #fa6401 !important;
+}
+#masthead .sm_menu_toggle,
+#masthead .sm_menu_toggle_close {
+  color: #fff !important;
+}
+#masthead .sm_menu_toggle i,
+#masthead .sm_menu_toggle_close i {
+  color: inherit !important;
+}
+
+/* Logo */
+#masthead .man_logo_img,
+#colophon .man_logo_img {
+  max-width: 200px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+#masthead .man_logo_img {
+  padding-left: 20px !important;
+}
+#masthead .man_logo_img img,
+#colophon .man_logo_img img,
+#masthead .man_logo_img__img {
+  object-fit: contain !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 200px !important;
+  max-height: 76px !important;
+  display: block !important;
+}
+#colophon .man_logo_img img {
+  max-height: 70px !important;
+}
+
+/* Collapse divider between navbar and hero to remove white space */
+.stm-title-banner-divider {
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Desktop: show nav in one line; mobile: hamburger */
+@media (min-width: 768px) {
+  #masthead .sm_menu {
+    display: block !important;
+  }
+  #masthead .sm_menu_toggle,
+  #masthead .sm_menu_toggle_close {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  #masthead .sm_menu:not(.opened) .sm_nav_menu {
+    display: none !important;
+  }
+  #masthead .sm_menu.opened .sm_nav_menu {
+    display: flex !important;
+    flex-direction: column;
+  }
+}
+
+/* Who We Are Section - Visual Strategy Styles */
+.who-we-are-content {
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+}
+
+/* Reset Elementor default margins for consistent spacing */
+.who-we-are-content .elementor-widget,
+.who-we-are-content .elementor-widget-container,
+.who-we-are-content .elementor-text-editor {
+  margin: 0 !important;
+}
+
+/* Consistent vertical rhythm - single spacing value */
+.who-we-are-content .elementor-widget {
+  --who-we-are-spacing: 1.5rem;
+}
+
+/* Heading: Bold Sans-Serif with letter-spacing and explicit font-size */
+.who-we-are-heading {
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-weight: 800 !important;
+  font-size: clamp(1.5rem, 4vw, 1.75rem) !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin-top: 0 !important;
+  margin-bottom: var(--who-we-are-spacing, 1.5rem) !important;
+}
+
+/* Sub-heading: Bold Sans-Serif with explicit font-size */
+.who-we-are-subheading {
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: clamp(1.125rem, 3vw, 1.25rem) !important;
+  color: #1a1a1a;
+  margin-top: var(--who-we-are-spacing, 1.5rem) !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Body text: Clean, light Serif/Sans-Serif with increased line-height */
+.who-we-are-body {
+  font-family: var(--font-poppins), Georgia, "Times New Roman", serif !important;
+  font-weight: 300 !important;
+  line-height: 1.6 !important;
+  color: #333333;
+  font-size: 1rem !important;
+  margin-bottom: var(--who-we-are-spacing, 1.5rem) !important;
+}
+
+.who-we-are-body p {
+  line-height: 1.6 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Industry Orange accents */
+.industry-orange {
+  color: #fa6401;
+  font-weight: 500;
+}
+
+/* Custom icon list styling */
+.who-we-are-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-top: 0 !important;
+}
+
+.who-we-are-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.6 !important;
+  font-family: var(--font-poppins), Georgia, "Times New Roman", serif !important;
+  font-weight: 300 !important;
+  font-size: 1rem !important;
+  color: #333333;
+}
+
+.who-we-are-list li:last-child {
+  margin-bottom: 0;
+}
+
+.who-we-are-icon {
+  flex-shrink: 0;
+  margin-top: 0.15em;
+  color: #fa6401;
+  stroke-width: 1.5;
+  width: 20px;
+  height: 20px;
+}
+
+.who-we-are-list li span {
+  flex: 1;
+}
+
+/* Strategic Positioning Section - Visual Strategy Styles */
+.strategic-positioning-content {
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+}
+
+/* Reset Elementor default margins for consistent spacing */
+.strategic-positioning-content .elementor-widget,
+.strategic-positioning-content .elementor-widget-container,
+.strategic-positioning-content .elementor-text-editor {
+  margin: 0 !important;
+}
+
+/* Consistent vertical rhythm - single spacing value */
+.strategic-positioning-content .elementor-widget {
+  --strategic-positioning-spacing: 1.5rem;
+}
+
+/* Heading: Bold Sans-Serif with letter-spacing and explicit font-size */
+.strategic-positioning-heading {
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-weight: 800 !important;
+  font-size: clamp(1.5rem, 4vw, 1.75rem) !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin-top: 0 !important;
+  margin-bottom: var(--strategic-positioning-spacing, 1.5rem) !important;
+}
+
+/* Sub-heading: Bold Sans-Serif with explicit font-size */
+.strategic-positioning-subheading {
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: clamp(1.125rem, 3vw, 1.25rem) !important;
+  color: #1a1a1a;
+  margin-top: var(--strategic-positioning-spacing, 1.5rem) !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Body text: Clean, light Serif/Sans-Serif with increased line-height */
+.strategic-positioning-body {
+  font-family: var(--font-poppins), Georgia, "Times New Roman", serif !important;
+  font-weight: 300 !important;
+  line-height: 1.6 !important;
+  color: #333333;
+  font-size: 1rem !important;
+  margin-bottom: var(--strategic-positioning-spacing, 1.5rem) !important;
+}
+
+.strategic-positioning-body p {
+  line-height: 1.6 !important;
+  margin-bottom: 0 !important;
+}
+
+/* List styling */
+.strategic-positioning-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-top: 0.75rem !important;
+}
+
+.strategic-positioning-list li {
+  margin-bottom: 1.25rem;
+  line-height: 1.6 !important;
+  font-family: var(--font-poppins), Georgia, "Times New Roman", serif !important;
+  font-weight: 300 !important;
+  font-size: 1rem !important;
+  color: #333333;
+}
+
+.strategic-positioning-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Quote styling */
+.strategic-positioning-quote {
+  font-family: var(--font-poppins), Georgia, "Times New Roman", serif !important;
+  font-style: italic !important;
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  color: #1a1a1a;
+  margin: var(--strategic-positioning-spacing, 1.5rem) 0 0 0 !important;
+  padding: 1.5rem 0 1.5rem 2rem !important;
+  border-left: 3px solid #fa6401;
+  background-color: transparent;
+}
+
+.strategic-positioning-quote::before,
+.strategic-positioning-quote::after {
+  content: none;
+}
