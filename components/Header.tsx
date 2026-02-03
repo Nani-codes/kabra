@@ -7,9 +7,21 @@ import { useState, useEffect } from "react";
 
 const LOGO_SRC = "/logo.jpeg";
 
+const PRODUCT_CATEGORIES = [
+  { label: "Gas Appliances", slug: "gas-appliances" },
+  { label: "Electrical", slug: "electrical" },
+  { label: "Electronics", slug: "electronics" },
+  { label: "Lighting", slug: "lighting" },
+  { label: "Furniture", slug: "furniture" },
+  { label: "Luggage", slug: "luggage" },
+  { label: "Auto Components", slug: "auto-components" },
+  { label: "Home Appliances", slug: "home-appliances" },
+] as const;
+
 export function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen((o) => !o);
   const closeMenu = () => setMenuOpen(false);
@@ -21,6 +33,10 @@ export function Header() {
       document.body.classList.remove("fancy-lock");
     }
     return () => document.body.classList.remove("fancy-lock");
+  }, [menuOpen]);
+
+  useEffect(() => {
+    if (!menuOpen) setProductsOpen(false);
   }, [menuOpen]);
 
   return (
@@ -116,7 +132,11 @@ export function Header() {
                                           : ""
                                       }`}
                                     >
-                                      <Link href="/" aria-current={pathname === "/" ? "page" : undefined}>
+                                      <Link
+                                        href="/"
+                                        aria-current={pathname === "/" ? "page" : undefined}
+                                        onClick={closeMenu}
+                                      >
                                         Home
                                       </Link>
                                     </li>
@@ -127,20 +147,67 @@ export function Header() {
                                           : ""
                                       }`}
                                     >
-                                      <Link href="/about-us" aria-current={pathname === "/about-us" ? "page" : undefined}>
+                                      <Link
+                                        href="/about-us"
+                                        aria-current={pathname === "/about-us" ? "page" : undefined}
+                                        onClick={closeMenu}
+                                      >
                                         About Us
                                       </Link>
                                     </li>
                                     <li
-                                      className={`menu-item menu-item-shop ${
+                                      className={`menu-item menu-item-shop menu-item-has-children ${
                                         pathname === "/shop"
                                           ? "current-menu-item current_page_item"
                                           : ""
-                                      }`}
+                                      } ${productsOpen ? "submenu-open" : ""}`}
                                     >
-                                      <Link href="/shop" className="nav-link-shop" aria-current={pathname === "/shop" ? "page" : undefined}>
+                                      <Link
+                                        href="/shop"
+                                        className="nav-link-shop products-parent-link"
+                                        aria-current={pathname === "/shop" ? "page" : undefined}
+                                        aria-haspopup="menu"
+                                        aria-expanded={menuOpen ? productsOpen : undefined}
+                                        onClick={(e) => {
+                                          if (menuOpen) {
+                                            e.preventDefault();
+                                            setProductsOpen((o) => !o);
+                                            return;
+                                          }
+                                          closeMenu();
+                                        }}
+                                      >
                                         Products
+                                        <i className="ti ti-angle-down products-caret" aria-hidden="true" />
                                       </Link>
+                                      <ul className="sub-menu" role="menu" aria-label="Products">
+                                        <li className="menu-item" role="none">
+                                          <Link
+                                            href="/shop"
+                                            role="menuitem"
+                                            onClick={() => {
+                                              setProductsOpen(false);
+                                              closeMenu();
+                                            }}
+                                          >
+                                            All Products
+                                          </Link>
+                                        </li>
+                                        {PRODUCT_CATEGORIES.map((cat) => (
+                                          <li key={cat.slug} className="menu-item" role="none">
+                                            <Link
+                                              href={`/shop?category=${cat.slug}`}
+                                              role="menuitem"
+                                              onClick={() => {
+                                                setProductsOpen(false);
+                                                closeMenu();
+                                              }}
+                                            >
+                                              {cat.label}
+                                            </Link>
+                                          </li>
+                                        ))}
+                                      </ul>
                                     </li>
                                     <li
                                       className={`menu-item ${
@@ -149,7 +216,11 @@ export function Header() {
                                           : ""
                                       }`}
                                     >
-                                      <Link href="/contacts" aria-current={pathname === "/contacts" ? "page" : undefined}>
+                                      <Link
+                                        href="/contacts"
+                                        aria-current={pathname === "/contacts" ? "page" : undefined}
+                                        onClick={closeMenu}
+                                      >
                                         Contact Us
                                       </Link>
                                     </li>
